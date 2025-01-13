@@ -30,3 +30,8 @@ models:
                   - returned
                   - placed
                   - return_pending
+        - name: amount
+          description: Dollars spent per order
+          tests:
+            - assert_column_is_greater_than_five
+            - assert_dollars_spent_are_greater_than_one
