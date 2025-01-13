@@ -38,3 +38,7 @@ models:
           tests:
             - assert_column_is_greater_than_five
             - assert_dollars_spent_are_greater_than_one
+            - dbt_expectations.expect_column_values_to_be_between:
+                min_value: 5
+                row_condition: "order_id is not null"
+                strictly: True
