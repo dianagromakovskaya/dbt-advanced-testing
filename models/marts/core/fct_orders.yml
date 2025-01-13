@@ -14,7 +14,10 @@ models:
                 field: customer_id
             - unique:
                 config:
-                  severity: warn
+                #  where: "order_date > '2018-03-01'"
+                  # limit: 10
+                  store_failures: true
+                  schema: test_failures
         - name: amount
           description: Dollars spent per order
           tests:
