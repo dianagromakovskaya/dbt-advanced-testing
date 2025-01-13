@@ -12,6 +12,9 @@ models:
 
     - name: stg_orders
       description: Staged order data from our jaffle shop app.
+      tests:
+        - dbt_utils.expression_is_true:
+            expression: "amount > 5"
       columns: 
         - name: order_id
           description: Primary key for orders.
