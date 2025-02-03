@@ -43,3 +43,8 @@ models:
     marts:
       core:
         +materialized: table
+
+tests:
+  jaffle_shop:
+    +severity: warn
+    +store_failures: true
